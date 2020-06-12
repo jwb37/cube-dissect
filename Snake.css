@@ -1,0 +1,73 @@
+#snake_container {
+    display: flex;
+    flex-direction: row;
+}
+#options_vertical_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.options_container {
+}
+#snake_visualization {
+    flex: auto;
+    height: 300;
+}
+
+#snake_solve_btn {
+    display: block;
+    font-weight: bold;
+    font-size: large;
+    margin: 10px auto;
+}
+
+
+#solution_container {
+    display: flex;
+    flex-direction: row;
+}
+#solution_text_column {
+    display: flex;
+    flex-direction: column;
+}
+#solution_text_output {
+    flex: auto;
+    width: 200px
+}
+#solution_3d_column {
+    flex: auto;
+    margin: 0 20px;
+}
+#solution_controls_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#solution_button_container {
+    display: flex;
+    flex-direction: row;
+}
+#solution_button_container > button {
+    margin: 0 10px;
+}
+#solution_visualization {
+    width: 100%;
+    min-height: 350px;
+}
+
+#control_info_label {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+}
+
+input:invalid {
+    border: 2px dashed red;
+}
+input:valid {
+    border: 2px solid black;
+}
+
+h1 {
+    background: linear-gradient(-70deg, #9999ff, #eeeeff);
+}

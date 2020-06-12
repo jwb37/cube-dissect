@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Snake.css" media="screen" />
+
+<script src="three.js/three.js"></script>
+<script src="three.js/OrbitControls.js"></script>
+<script src="image_data.js"></script>
+<script src="ThreeVisualizer.js"></script>
+<script src="Geometry2D.js"></script>
+<script src="Geometry3D.js"></script>
+<script src="Solver.js"></script>
+<script src="App.js"></script>
+
+</head>
+
+<body>
+<h1>Snake</h1>
+<div id="snake_container">
+    <div id="options_vertical_container">
+        <div class="options_container">
+            <label for="snake_text_input">Lengths:</label>
+            <input id="snake_text_input" required
+                pattern="\d+(?:[,\s]+\d+)*"
+                title="A comma-separated list of integer lengths"
+                value="3,2,2,3,2,3,2,2,3,3,2,2,2,3,3,3,3"
+                size=24
+            />
+        </div>
+        <div class="options_container">
+            <label for="cube_size_spin">Cube Size:</label>
+            <input id="cube_size_spin" required
+                title="Side length of the cube (or square in 2D) to fit the snake into"
+                type="number"
+                min=1
+                value=3
+            />
+        </div>
+        <div class="options_container">
+            <label for="geometry_selector">Geometry:</label>
+            <select id="geometry_selector" required>
+                <option value="2D">2D</option>
+                <option value="3D" selected>3D</option>
+            </select>
+        </div>
+    </div>
+    <div id="snake_visualization"></div>
+</div>
+<button id="snake_solve_btn">Solve</button>
+
+<h1>Solution</h1>
+<div id="solution_container">
+    <div id="solution_text_column">
+        <label id="solution_text_label" for="solution_text_output">Text Solution</label>
+        <select id="solution_text_output" size=18></select>
+    </div>
+    <div id="solution_3d_column">
+        <div id="solution_controls_row">
+            <label id="solution_3d_label">3D Visualization</label>
+            <div id="solution_button_container">
+                <button id="reset_button">First Step</button>
+                <button id="step_back_button">&lt;&lt;</button>
+                <button id="step_forward_button">&gt;&gt;</button>
+            </div>
+        </div>
+        <div id="solution_visualization"></div>
+    </div>
+</div>
+<label id="control_info_label">
+Mouse Wheel: Zoom <br/>
+Left-click and drag: Move Camera
+</label>
+
+<script>
+    var app = new App()
+</script>
+</body>
+</html>
