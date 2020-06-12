@@ -55,7 +55,7 @@ function Solver(snake, geometry) {
             let success;
             let solution_array;
             let solved_bbox;
-            [success, solution_array, solved_bbox] = solve_step(layer+1, new_pos, new_direction, new_bbox, new_filled_spaces);
+            [success, solution_array] = solve_step(layer+1, new_pos, new_direction, new_bbox, new_filled_spaces);
 
             if (success) {
                 return [true, [direction, ...solution_array]];
