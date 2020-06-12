@@ -70,17 +70,17 @@ function ThreeVisualizer(container, type) {
         );
 
 
-		let light_source = new THREE.DirectionalLight();
-		light_source.position.set(-1,0,20);
-		scene.add(light_source);
+        let light_source = new THREE.DirectionalLight();
+        light_source.position.set(-1,0,20);
+        scene.add(light_source);
 
         /*
             Illuminate on all sides for the solution view!
         */
         if( type==VisType.Solution ) {
-	        light_source = new THREE.DirectionalLight();
-	        light_source.position.set(-4,10,-20);
-	        scene.add(light_source);
+            light_source = new THREE.DirectionalLight();
+            light_source.position.set(-4,10,-20);
+            scene.add(light_source);
 
             light_source = new THREE.DirectionalLight();
             light_source.position.set(4,-10,-1);
