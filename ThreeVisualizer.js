@@ -5,7 +5,8 @@ const CameraOffsetSolution = new THREE.Vector3(2.5, 4, 5);
 
 /*
     We need two slightly different setups for the two visualizers.
-    Inheritance in Javascript seems to be a mess, so I opted for passing the type into the constructor isntead. Ugly, but there you go!
+    Inheritance in Javascript seems to be a mess, so I opted for passing the type into the constructor instead.
+    Ugly, but there you go!
 */
 
 var VisType = {
