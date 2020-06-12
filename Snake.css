@@ -60,6 +60,11 @@
     text-align: center;
     margin: 5px 0;
 }
+#repository_link {
+    display: block;
+    text-align: right;
+}
+
 
 input:invalid {
     border: 2px dashed red;
