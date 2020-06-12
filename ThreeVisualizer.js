@@ -42,7 +42,6 @@ function ThreeVisualizer(container, type) {
         camera = new THREE.PerspectiveCamera( 60, container.clientWidth / container.clientHeight, 1, 1000 );
         if( type==VisType.Snake ) {
             camera.position.set( 0, 0, CameraDistanceSnake );
-//            camera.up.set( -1, 1, 0 );
             camera.up.set(0,1,0);
         } else if( type==VisType.Solution ) {
             camera.position.set( 0, 0, 0 );
@@ -55,20 +54,20 @@ function ThreeVisualizer(container, type) {
         cube_texture = new THREE.TextureLoader().load(ImageData.cube_texture);
 
         cube_material = new THREE.MeshPhongMaterial(
-			{
-				color:			0xFFFFFF,
-				emissive:		0x303020,
-				map:			cube_texture
-			}
-		);
+            {
+                color:			0xFFFFFF,
+                emissive:		0x303020,
+                map:			cube_texture
+            }
+        );
 
         cube_highlight_material = new THREE.MeshPhongMaterial(
-			{
-				color:			0xFFFFFF,
-				emissive:       0xAA2020,
-				map:			cube_texture
-			}
-		);
+            {
+                color:			0xFFFFFF,
+                emissive:       0xAA2020,
+                map:			cube_texture
+            }
+        );
 
 
 		let light_source = new THREE.DirectionalLight();
@@ -83,9 +82,9 @@ function ThreeVisualizer(container, type) {
 	        light_source.position.set(-4,10,-20);
 	        scene.add(light_source);
 
-		    light_source = new THREE.DirectionalLight();
-		    light_source.position.set(4,-10,-1);
-		    scene.add(light_source);
+            light_source = new THREE.DirectionalLight();
+            light_source.position.set(4,-10,-1);
+            scene.add(light_source);
         }
 
 
